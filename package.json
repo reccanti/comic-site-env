@@ -1,0 +1,15 @@
+{
+  "name": "comic-site",
+  "version": "1.0.0",
+  "description": "A project that handles docker setup and task running",
+  "main": "index.js",
+  "scripts": {
+    "start": "./scripts/docker-launch-site.sh",
+    "stop": "./scripts/docker-stop-site.sh",
+    "teardown": "npm run stop && ./scripts/docker-teardown-site.sh",
+    "ssh": "./scripts/docker-ssh.sh",
+    "build": "./scripts/docker-copy-themes.sh"
+  },
+  "author": "Blair Wilcox <reccanti@gmail.com>",
+  "license": "MIT"
+}
