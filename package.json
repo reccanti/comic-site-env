@@ -9,8 +9,12 @@
     "teardown": "npm run stop && ./scripts/docker-teardown-site.sh",
     "ssh": "./scripts/docker-ssh.sh",
     "build": "./scripts/docker-copy-plugins.sh && ./scripts/docker-copy-themes.sh",
-    "export": "./scripts/docker-export.sh"
+    "export": "./scripts/docker-export.sh",
+    "dev": "npm run build && gulp"
   },
   "author": "Blair Wilcox <reccanti@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }

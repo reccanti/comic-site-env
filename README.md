@@ -23,4 +23,5 @@ Glad you asked! Here they are:
 * `npm run teardown` – When you stop a container, all of your current configuration is stored in a volume. This might not be good if you forgot your password or configured your database incorrectly. This script tears it all down, so that you can have a fresh start when you run `npm run start` again
 * `npm run ssh` – This just `ssh`s into the docker container. Useful for answering the question: "Just where IS that folder I want to copy into?"
 * `npm run build` – This is the meat of development. This command copies all your themes and plugins into the docker container. This is how you'll test your changes.
+* `npm run dev` – this will be your primary command during development. It just runs a (flimsy) gulp script that copies files from the `themes` and `plugis` directories into your docker container. You'll still need to manually refresh. It's fairly fast though!
 * `npm run export` – This is just a goofy little script that copies your wordpress site into a folder called `dist` at the root of this repository. Useful if you're looking to just FTP a site up.
