@@ -1,4 +1,5 @@
 .DS_Store
+.env
 *.zip
 dist
 node_modules
