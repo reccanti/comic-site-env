@@ -9,6 +9,7 @@
     "init:install-plugins": "./scripts/clone-plugins.sh",
     "init:install-wordpress": "./scripts/install-wordpress.sh",
     "init": "npm run init:install-wordpress && npm run init:install-themes && npm run init:install-plugins",
+    "setup": "npm run launch && wait-on ./wp-app/wp-admin ./wp-app/wp-content ./wp-app/wp-config.php && npm run init",
     "obliterate": "rm -rf wp-app && rm -rf wp-data",
     "stop": "./scripts/docker-stop-site.sh",
     "teardown": "npm run stop && ./scripts/docker-teardown-site.sh",
@@ -21,5 +22,8 @@
   "license": "MIT",
   "devDependencies": {
     "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "wait-on": "^5.3.0"
   }
 }
