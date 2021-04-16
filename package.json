@@ -4,7 +4,12 @@
   "description": "A project that handles docker setup and task running",
   "main": "index.js",
   "scripts": {
-    "launch": "./scripts/docker-launch-site.sh",
+    "launch": "mkdir wp-app && mkdir wp-data && docker compose up -d",
+    "init:install-themes": "./scripts/clone-themes.sh",
+    "init:install-plugins": "./scripts/clone-plugins.sh",
+    "init:install-wordpress": "./scripts/install-wordpress.sh",
+    "init": "npm run init:install-wordpress && npm run init:install-themes && npm run init:install-plugins",
+    "obliterate": "rm -rf wp-app && rm -rf wp-data",
     "stop": "./scripts/docker-stop-site.sh",
     "teardown": "npm run stop && ./scripts/docker-teardown-site.sh",
     "ssh": "./scripts/docker-ssh.sh",

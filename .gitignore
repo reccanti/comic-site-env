@@ -9,3 +9,6 @@ themes/*
 
 plugins/*
 !plugins/README.md
+
+wp-app
+wp-data
